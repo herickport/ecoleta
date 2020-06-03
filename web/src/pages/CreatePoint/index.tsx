@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
+import { Map, TileLayer, Marker } from 'react-leaflet';
 
 import './styles.css';
 
@@ -28,29 +29,17 @@ const CreatePoint = () => {
 
           <div className="field">
             <label htmlFor="name">Nome da entidade</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-            />
+            <input type="text" name="name" id="name" />
           </div>
 
           <div className="field-group">
             <div className="field">
               <label htmlFor="name">E-mail</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-              />
+              <input type="email" name="email" id="email" />
             </div>
             <div className="field">
               <label htmlFor="name">Whatsapp</label>
-              <input
-                type="text"
-                name="whatsapp"
-                id="whatsapp"
-              />
+              <input type="text" name="whatsapp" id="whatsapp" />
             </div>
           </div>
         </fieldset>
@@ -60,6 +49,15 @@ const CreatePoint = () => {
             <h2>Endereço</h2>
             <span>Selecione o endereço no mapa</span>
           </legend>
+
+          <Map center={[-15.912809, -52.2868655]} zoom={15}>
+            <TileLayer
+              attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+
+            <Marker position={[-15.912809, -52.2868655]} />
+          </Map>
 
           <div className="field-group">
             <div className="field">
