@@ -27,6 +27,7 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
+- [TypeScript](https://www.typescriptlang.org/)
 - [Node.js](https://nodejs.org/en/)
 - [React](https://reactjs.org)
 - [React Native](https://facebook.github.io/react-native/)
@@ -38,14 +39,36 @@ O Ecoleta é um projeto que visa conectar pontos de coleta de materiais reciclá
 
 ## 🤔 Como utilizar
 
+- Pré-requisitos
+
+  - Possuir o [Node.js](https://nodejs.org/en/) instalado na máquina;
+  - Ter um gerenciador de pacotes seja o [npm](https://www.npmjs.com/) ou o [yarn](https://yarnpkg.com/);
+  - É essencial ter o [Expo](https://expo.io/) instalado de forma global na máquina.
+
 - Faça um clone desse repositório: `git clone https://github.com/herickport/ecoleta.git`;
+
+  ##### Depedências
+
+  - `npm install`
+
+  ##### Banco de Dados
+
+  - `cd backend`
+  - `npm run knex:migrate`
+  - `npm run knex:seed`
+
   ##### Backend
-  - `cd backend/`
+
+  - `cd server/`
   - `npm run dev`
+
   ##### Frontend
-  - `cd frontend/`
+
+  - `cd web/`
   - `npm start`
+
   ##### Mobile
+
   - `cd mobile/`
   - `npm start`
 
